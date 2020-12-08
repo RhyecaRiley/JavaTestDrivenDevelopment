@@ -107,4 +107,13 @@ class StackTests {
 		stackImplementation.push("Three");
 		assertEquals(stackImplementation.search("Four"), 0);
 	}
+	
+	@Test
+	void stackShouldSwitchFromStringToInt() {
+		StackImplementation<Integer> stackImplementation = new StackImplementation<Integer>();
+		stackImplementation.push(1);
+		stackImplementation.push(2);
+		stackImplementation.push(3);
+		assertEquals(stackImplementation.peek(), 3);
+	}
 }
